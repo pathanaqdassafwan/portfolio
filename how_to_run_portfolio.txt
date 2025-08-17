@@ -1,0 +1,13 @@
+1.Open a PowerShell terminal in VS Code
+
+2.Make sure you're in the correct directory
+cd f:\portfolio
+
+3.Activate your virtual environment
+& F:/portfolio/.venv/Scripts/Activate.ps1
+
+You'll see (.venv) appear at the beginning of your
+command prompt, indicating the virtual environment is active.
+4.Run the Flask application
+
+python app.py

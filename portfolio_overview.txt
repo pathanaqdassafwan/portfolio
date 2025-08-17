@@ -1,0 +1,52 @@
+PORTFOLIO WEBSITE OVERVIEW
+==========================
+
+This is a personal portfolio website built with Flask, a Python web framework. The website showcases skills, projects, education, and experience as an Artificial Intelligence & Data Science student.
+
+KEY FEATURES
+-----------
+
+1. Modern Design: Clean, responsive layout with smooth animations and professional styling.
+
+2. About Section: Introduces you as a B.E Artificial Intelligence & Data Science student with a passion for solving complex problems using cutting-edge technologies.
+
+3. Education Section: Highlights your Bachelor of Engineering degree in Artificial Intelligence & Data Science from Babasaheb Naik College of Engineering.
+
+4. Profile Image: Displays your professional photo in the about section, helping visitors connect with you.
+
+5. Responsive Layout: The website adapts to different screen sizes, ensuring it looks good on desktops, tablets, and mobile devices.
+
+TECHNICAL DETAILS
+---------------
+
+- Backend: Flask (Python web framework)
+- Frontend: HTML, CSS, JavaScript
+- Animations: CSS transitions and JavaScript for smooth fade-in effects
+- Icons: Font Awesome for various icons throughout the site
+- Styling: Custom CSS with a modern gradient color scheme
+
+PURPOSE
+------
+
+This portfolio serves as a professional online presence to showcase your skills, projects, and experience to potential employers, clients, or collaborators. It highlights your expertise in AI, machine learning, deep learning, and data science, presenting you as a knowledgeable professional in these fields.
+
+The website is designed to make a strong first impression and provide visitors with a comprehensive understanding of your capabilities and accomplishments in the field of AI and Data Science.
+
+FILE STRUCTURE
+------------
+
+/portfolio/
+├── app.py               # Main Flask application file
+├── portfolio_app.py     # Additional application file
+├── requirements.txt     # Python dependencies
+├── README.md           # Project documentation
+├── static/             # Static files directory
+│   ├── css/            # CSS stylesheets
+│   │   └── style.css   # Main stylesheet
+│   ├── js/             # JavaScript files
+│   │   ├── script.js   # Main script file
+│   │   └── main.js     # Additional script file
+│   └── images/         # Images directory
+│       └── profile.jpg # Profile picture
+└── templates/          # HTML templates
+    └── index.html      # Main HTML template

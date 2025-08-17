@@ -1,0 +1,29 @@
+# Portfolio Application - Terminal Commands
+
+## Basic Commands
+
+### Start the Application
+```powershell
+cd f:\portfolio
+& F:/portfolio/.venv/Scripts/Activate.ps1
+python app.py
+```
+
+### Stop the Application
+```powershell
+# Press Ctrl+C in the terminal
+# OR run this in a new terminal:
+taskkill /f /im python.exe
+```
+
+### Restart the Application
+```powershell
+taskkill /f /im python.exe 2>$null; Start-Sleep 2; cd f:\portfolio; python app.py
+```
+
+## Accessing the Website
+http://127.0.0.1:5000 or http://localhost:5000
+
+## Common Issues
+- If changes don't appear, hard refresh browser (Ctrl+F5)
+- If port is in use, kill Python processes first
