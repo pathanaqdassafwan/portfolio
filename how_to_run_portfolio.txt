@@ -27,8 +27,12 @@ Netlify deployment (automated via GitHub Actions)
 	- Add `NETLIFY_AUTH_TOKEN` with the token value.
 	- Add `NETLIFY_SITE_ID` with the Site ID value.
 
-4. Push to `main` (already configured): GitHub Actions will run the `.github/workflows/deploy-netlify.yml` workflow and deploy the site to Netlify.
+4. Push to `main`: use Netlify's direct GitHub integration (recommended):
+	- Go to https://app.netlify.com/sites/new -> "Import an existing project" -> GitHub.
+	- Authorize Netlify to access your GitHub account (one-time) and select this repository.
+	- For "build command" leave blank; set "publish directory" to `templates` (or whichever folder contains `index.html`).
+	- Finish the setup and Netlify will automatically deploy on every push to `main`.
 
 Notes:
-- The workflow uses the repository root (`./`) as the publish directory. If your static files are in a subfolder, update the `--dir` arg in the workflow file.
-- If you prefer connecting Netlify directly to GitHub (no secrets needed), you can simply use Netlify's UI to auto-deploy on pushes.
+- No repository secrets are required with direct GitHub integration.
+- If your site requires a build step, set the build command and publish directory accordingly.
