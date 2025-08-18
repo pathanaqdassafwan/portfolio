@@ -1,0 +1,68 @@
+GITHUB UPLOAD GUIDE
+==================
+
+STEP 1: CREATE A GITHUB REPOSITORY
+---------------------------------
+1. Go to https://github.com/new
+2. Name your repository: portfolio
+3. Set visibility: Public or Private
+4. DO NOT initialize with README, .gitignore, or license
+5. Click "Create repository"
+
+STEP 2: GENERATE A PERSONAL ACCESS TOKEN (PAT)
+--------------------------------------------
+1. Go to GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)
+   Direct link: https://github.com/settings/tokens
+2. Click "Generate new token" → "Generate new token (classic)"
+3. Give it a name like "Portfolio Upload"
+4. Set expiration as needed
+5. Select these scopes: repo, workflow
+6. Click "Generate token"
+7. IMPORTANT: Copy the token immediately - you won't see it again!
+
+STEP 3: UPLOAD YOUR REPOSITORY
+----------------------------
+Run these commands in PowerShell:
+
+```powershell
+# Navigate to your portfolio folder (if not already there)
+cd f:\portfolio
+
+# Set your Git username and email (if not already set)
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+
+# Add the remote repository (replace YOUR-USERNAME with your actual GitHub username)
+git remote add origin https://github.com/YOUR-USERNAME/portfolio.git
+
+# Rename the default branch to main
+git branch -M main
+
+# Push your code to GitHub
+git push -u origin main
+```
+
+When prompted for password, use the personal access token you generated in Step 2.
+
+STEP 4: VERIFY YOUR UPLOAD
+------------------------
+1. Go to https://github.com/YOUR-USERNAME/portfolio
+2. You should see all your portfolio files in the repository
+
+STEP 5: FUTURE UPDATES
+-------------------
+After making changes to your portfolio, upload them with:
+
+```powershell
+git add .
+git commit -m "Description of your changes"
+git push
+```
+
+TROUBLESHOOTING
+-------------
+• If you get "Repository not found" error: Double-check your GitHub username in the URL
+• If authentication fails: Make sure you're using your personal access token, not your GitHub password
+• If you have large files (>100MB): You'll need Git LFS or to exclude those files
+
+For more help, visit: https://docs.github.com/en/get-started/quickstart
