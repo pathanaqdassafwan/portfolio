@@ -1,0 +1,10 @@
+# Netlify configuration for portfolio website
+[build]
+  publish = "./"
+# Uncomment and set a build command if needed, e.g. for static site generators
+# command = "python build.py"
+
+# [[redirects]]
+#   from = "/api/*"
+#   to = "/.netlify/functions/:splat"
+#   status = 200

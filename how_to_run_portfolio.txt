@@ -8,6 +8,27 @@ cd f:\portfolio
 
 You'll see (.venv) appear at the beginning of your
 command prompt, indicating the virtual environment is active.
-4.Run the Flask application
 
+4.Run the Flask application
 python app.py
+
+Netlify deployment (automated via GitHub Actions)
+
+1. Create a Netlify site manually once:
+	- Go to https://app.netlify.com/sites/new -> "Import an existing project" -> GitHub -> select your repository.
+	- During setup, note the "Site ID" from the site settings (Site settings -> Site information).
+
+2. Create a Personal Access Token for Netlify:
+	- In Netlify, open User settings -> Applications -> Personal access tokens -> "New access token".
+	- Copy the token.
+
+3. Add secrets to your GitHub repository:
+	- Go to your GitHub repo -> Settings -> Secrets and variables -> Actions -> New repository secret.
+	- Add `NETLIFY_AUTH_TOKEN` with the token value.
+	- Add `NETLIFY_SITE_ID` with the Site ID value.
+
+4. Push to `main` (already configured): GitHub Actions will run the `.github/workflows/deploy-netlify.yml` workflow and deploy the site to Netlify.
+
+Notes:
+- The workflow uses the repository root (`./`) as the publish directory. If your static files are in a subfolder, update the `--dir` arg in the workflow file.
+- If you prefer connecting Netlify directly to GitHub (no secrets needed), you can simply use Netlify's UI to auto-deploy on pushes.
