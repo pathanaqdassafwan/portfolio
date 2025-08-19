@@ -41,6 +41,11 @@ def download_resume():
     # Serve the PDF file instead of generating a text file
     return send_from_directory('static', 'pathan_cv.pdf', as_attachment=True)
 
+
+@app.route('/_health')
+def health():
+    return 'OK', 200
+
 if __name__ == '__main__':
     # Create directories if they don't exist
     os.makedirs('templates', exist_ok=True)
